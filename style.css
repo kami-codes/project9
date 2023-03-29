@@ -1,0 +1,198 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+body{
+    background-color: rgba(0,0,0,0.8);
+}
+.heading{
+    text-align: center;
+    margin: 50px 0px;
+    color: white;
+    font-size: 1.5rem;
+}
+.game{
+   
+    padding: 20px 20px;
+}
+.game_console{
+    margin: 20px;
+    text-align: center;
+}
+ .btn{
+    padding: 10px 30px;
+    font-size: 1.3rem;
+    border: 1px solid transparent;
+    background-color: rgb(8, 151, 8);
+    color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+ .restart{
+    margin-left: 10px;
+    background-color: chocolate;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.5s ease ;
+    transition: opacity 0.5s ease ;
+}
+.game_screen{
+    display: flex;
+    visibility: hidden;  
+    justify-content: center;
+    padding: 20px;
+    opacity: 0;
+    transition: visibility 0.5s ease ;
+    transition: opacity 0.5s ease ;
+    pointer-events: none;
+}
+.user_screen, .comp_screen{
+    background-color: aqua;
+    margin: 0px 20px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+
+
+.user_screen_txt , .comp_screen_txt{
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+/* .comp_screen{
+    background-color: aqua;
+    margin: 0px 20px;
+    padding: 10px;
+} */
+
+.card_container{
+    display: flex;
+    justify-content: center;
+    margin: 10px 0px;
+}
+.card{
+    margin: 0px 10px;
+    background-color: blueviolet;
+    width: 10vw;
+    height: 10vw;
+    font-size: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    cursor: context-menu;
+    color: white;
+}
+.user_card{
+    visibility: visible;
+    cursor: pointer;
+    opacity: 1;
+    transition: visibility 0.5s ease 0s , opacity 0.5s ease 0s;
+}
+.selected_user_choice{
+    border: 5px solid yellow;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
+}
+.selected_comp_choice{
+    border: 5px solid white;
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
+}
+.user_card:hover{
+    box-shadow: 8px 8px 10px rgba(0,0,0,0.5);
+    transition: 0.3s;
+    border: 5px solid yellow;
+}
+
+.comp_card{
+    transition: rotate 1s ease-in-out 0s, opacity 0.7s ease-in-out 0s;
+}
+
+.result_screen{
+    margin-top: 20px;
+    text-align: center;
+    visibility: hidden;
+    color: white;
+    font-size: 2rem;
+    text-shadow: 1px 1px 100px rgba(255, 255, 255, 0.7);
+    
+}
+
+.you_won{
+    color: yellow;
+}
+.flicker{
+    animation-name: flickerAnimation;
+    animation-iteration-count: infinite;
+    animation-duration: 0.5s;
+}
+.you_lost{
+    color: red;
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+
+@media screen and (max-width: 1024px) {
+    .user_screen_txt, .comp_screen_txt{
+        font-size: 1.6rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .game_screen{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .user_screen, .comp_screen{
+        margin-bottom: 30px;
+        min-width: 400px;
+        padding: 20px 10px;
+    }
+    .card{
+        width: 80px;
+        height: 80px;
+    }
+    .card h3{
+        font-size: 3rem;
+    }
+    .heading{
+        margin: 30px 0px 10px 0px;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 425px) {
+    .game{
+        padding: 10px;
+    }
+    .game_console{
+        margin: 10px 0px;
+    }
+    .game_screen{
+        padding: 5px;
+    }
+    .user_screen, .comp_screen{
+        margin-bottom: 20px;
+        min-width: 300px;
+        padding: 20px 10px;
+    }
+    .card{
+        width: 80px;
+        height: 80px;
+    }
+    .card h3{
+        font-size: 2.5rem;
+    }
+    .heading{
+        margin: 10px 0px 10px 0px;
+        font-size: 1.1rem;
+    }
+    .result_screen{
+        margin-top: 0px;
+    }
+}

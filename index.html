@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissor Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="heading">
+        <h1>Rock-Paper-Scissor</h1>
+    </div>
+    <div class="game">
+        <div class="game_console">
+            <button id="start" class="btn">Start</button>
+            <button class="btn restart" id="restart" onclick="refresh()">New Game</button>
+        </div>
+        <div class="game_screen">
+
+            <div class="user_screen">
+                <h3 class="user_screen_txt" >Chose Your Hand</h3>
+                <div class="card_container">
+                    <div class="card user_card" id="rock">
+                        <h3>✊</h3>
+                    </div>
+                    <div class="card user_card" id="paper">
+                        <h3>🤚</h3>
+                    </div>
+                    <div class="card user_card" id="scissor">
+                        <h3>✌️</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="comp_screen">
+                <h3 class="comp_screen_txt" >Computer has chosen</h3>
+                <div class="card_container">
+                    <div class="card comp_card" id="crock">
+                        <h3>?</h3>
+                    </div>
+                    <div class="card comp_card" id="cpaper">
+                        <h3>?</h3>
+                    </div>
+                    <div class="card comp_card" id="cscissor">
+                        <h3>?</h3>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="result_screen flicker" >
+            <h1>anything</h1>
+        </div>
+    </div>
+
+<script src="scripts.js"></script>
+</body>
+
+</html>
